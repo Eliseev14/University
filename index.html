@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Dodle Jump</title>
+	
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="main">
+		<h1 id="title">Doodle Jump</h1>
+		<button id="play" onclick="hide()">ИГРАТЬ</button>
+		<button id="records" onclick="record()">РЕКОРДЫ</button>
+		<button id='instruction' onclick='help()'>Справка</button>
+		<button id='refInstruction' onclick='refHelp()'>Вернуться</button>
+		<div id='text_help'>
+			<h3 id='headHelp'></h3>
+			<p id='bodyHelp'>
+				Главная цель игры - помочь "Дудлеру" добраться
+				как можно выше по платформам и набарать как можно большее количество очков.Героем можно управлять с помощью 2 кнопок клавиатуры (влево, вправо). <br>
+				Существует 3 вида платформ: <br>
+				 1) Обычные платформы(красного цвета); <br>
+				 2) Движущиеся платформы(синего цвета); <br>
+				 3) Прозрачные платформы(коричневого цвета),от них 'дудлер' не отпрыгивает(); <br>
+				 В правом углу начисляются очки набранные за продвижение вверх.
+				 При достижении 500 очков происходит усложенение сложности (уменьшается количество платформ),при 1000 очков усложнение происходит еще раз.
+				 Если ваш результат войдет в 5 лучших результатов, то выведется окно с для ввода вашего имени и результат занесется в таблицу рекордов.
+			</p>
+
+		</div>
+		<div id='table_rec'>
+			<div class='result' id='result1'></div>
+			<div class='result' id='result2'></div>
+			<div class='result' id='result3'></div>
+			<div class='result' id='result4'></div>
+			<div class='result' id='result5'></div>	
+		</div>
+		<button id='refund' onclick="refund1()">Вернуться в главное меню</button>
+		<button id='clearRecords'  onclick="confirm1()">Очистить рекорды</button>
+		<div id="confirmClear">
+			<h2> Вы действительно хотите безвозвратно удалить все данные о рекордах?</h2>
+			<button id="Yes" onclick="clearRec()">Да</button>
+			<button id="No" onclick="cancel1()">Нет</button>
+		</div>
+		<div id='image'></div>
+		
+		<button id="close" onclick="closeWindow()">Выйти</button>
+		<div id=game_over>
+			<p id='text_game_over'>Игра окончена</p>
+			<button id='reset' onclick="reset()">Начать заново</button>
+			<button id='exit1' onclick="exitf()">Выйти</button>
+		</div>
+		<div id="line">
+			<button id="pause" onclick="pause()">Pause</button>
+			<div id='score'></div>
+		</div>
+
+		<div id="mpause">
+				<h2 id="mpause_h">ПАУЗА</h2>
+				<button id="resume" onclick="resume()">Продолжить</button>
+				<button id="exit" onclick="exit12()">Выйти</button>
+			</div>
+			<div id="confirm">
+				<h2>Вы действительно хотите выйти?</h2>
+				<button id="confirmYes" onclick="exitf()">Да</button>
+				<button id="confirmNo"  onclick="cancel()">Нет</button>
+			</div>
+		<canvas id="game" width="450" height="680"></canvas>
+        <canvas id="game1" width="450" height="680"></canvas>	
+	</div>
+<script src="script.js"></script>
+</body>
+
+</html>
